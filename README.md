@@ -72,13 +72,38 @@ The following ChatGPT prompt was used to generate our synthetic data:
 </i>
 
 
-## Data Cleaning
-
-
-## Exploratory Data Analysis
-
+## Data Cleaning & Exploratory Data Analysis
+  <ul>
+    <li>Target Variable=MonthlyRent</li>
+    <li>Feature variables categorized into three types: Categorical Variables, Discrete Variables and Continuous Variables.</li>
+    <li>Pairwise plots were produced using Seaborn to identify patterns and relationships.
+</li>
+    <li>The following features had the most influence on MonthlyRent, and to be used for model building: City, RentalType, Year, Month, Bedrooms, 
+SquareFootage, and AnnualPropertyTax.</li>
+    <li>Performed Categorical Encoding and Standardized Scaling for pre-processing pipeline, where:</li>
+    <ul>
+      <li>Dependant variable=MonthlyRent</li>
+      <li>Categorical variables=City, RentalType</li>
+      <li>Discrete variables=Year, Month, Bedrooms, SquareFootage, Admissions</li>
+      <li>Continuous variables=AnnualPropertyTax</li>
+    </ul>
+    
 ## Model Building
 
+Steps for model selection (both linear regression and random forest regressor):
+    <ul>
+      <li>(1) Define target (y) and features (X) </li>
+      <li>(2) Encode categorical features</li>
+      <li>(3) Split data into training and testing sets, size=0.2</li>
+      <li>(4) Initialize, then train model</li>
+      <li>(5) Get model coefficients and intercept</li>
+      <li>(6) Make predictions on test set</li>
+      <li>(7) Evaluate model</li>
+      <li>(8) Perform k-fold cross-validation (k=5)</li>
+    </ul>
+    <li>Performed hyperparameter tuning on random forest regressor using GridSearchCV.</li>
+  </ul>
+  
 ## Model Performance
 <b>Linear Regression Model:</b>
   <ul>
@@ -92,3 +117,11 @@ The following ChatGPT prompt was used to generate our synthetic data:
     <li><b>R^2 Score:</b> 0.980581</li>
    <li><b>Average MSE from Cross-Validation:</b> 716345.255222</li>
     </ul>
+
+Random Forest Regressor performed better. As it is more suited for non-linear data, suggesting data's non-linearity.
+
+## Predictions
+
+
+
+
