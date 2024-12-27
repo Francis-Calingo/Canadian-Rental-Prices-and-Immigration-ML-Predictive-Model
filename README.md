@@ -76,8 +76,8 @@ The following ChatGPT prompt was used to generate our synthetic data:
   <ul>
     <li>Target Variable=MonthlyRent</li>
     <li>Feature variables categorized into three types: Categorical Variables, Discrete Variables and Continuous Variables.</li>
-    <li>Pairwise plots were produced using Seaborn to identify patterns and relationships.![alt text](https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/[branch]/image.jpg?raw=true)
-</li>
+    <li>Pairwise plots were produced using Seaborn to identify patterns and relationships.![Image1 README Canadian Immigration Rent Project](https://github.com/user-attachments/assets/4f01929a-02bb-4df9-bf11-6f60d533ffeb)
+ </li>
     <li>The following features had the most influence on MonthlyRent, and to be used for model building: City, RentalType, Year, Month, Bedrooms, 
 SquareFootage, and AnnualPropertyTax.</li>
     <li>Performed Categorical Encoding and Standardized Scaling for pre-processing pipeline, where:</li>
