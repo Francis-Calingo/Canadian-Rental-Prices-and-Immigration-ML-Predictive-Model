@@ -9,10 +9,14 @@
   
 ## Code and Resources Used
   <ul>
-    <li>IDEs Used: Google Colab, Jupyter Notebook</li>
-    <li>Python Version: 3.10.12</li>
-    <li>Libraries and Packages: [google.colab] files, [pandas] pandas, [seaborn] seaborn, sklearn[ColumnTransformer, Pipeline, StandardScaler, OneHotEncoder, train_test_split, LinearRegression, mean_squared_error, r2_score, RandomForestRegressor, make_scorer, cross_val_score, GridSearchCV] </li>
-    <li>ChatGPT version: GPT-4</li>
+    <li><b>IDEs Used:</b> Google Colab, Jupyter Notebook</li>
+    <li><b>Python Version:</b> 3.10.12</li>
+    <li><b>Libraries and Packages:</b>
+    <ul>
+      <li><b><i>sklearn Packages:</i> </b> ColumnTransformer, Pipeline, StandardScaler, OneHotEncoder, train_test_split, LinearRegression, mean_squared_error, r2_score, RandomForestRegressor, make_scorer, cross_val_score, GridSearchCV</li>
+      <li><b> <i>Other Packages:</i> </b> pandas, files (from google.colab), seaborn</li>
+    </ul></li>
+    <li><b>ChatGPT version:</b> GPT-4</li>
   </ul>
   
 ## Web Scraping
@@ -21,11 +25,70 @@ Permanent Residence admission Data was scraped from this website: https://open.c
 ## Feature Engineering
 The following ChatGPT prompt was used to generate our synthetic data:
 
+<i>Generate a realistic dataset of rental prices for major Canadian cities, including Vancouver, Toronto, Montreal, Calgary, Ottawa, Edmonton, and Halifax. The dataset should include:</i>
+
+<i><b>1.	Data Columns:</b>
+<ul>
+    <li>City: Major cities like Toronto, Vancouver, Montreal, Calgary, etc.</li>
+    <li>Province: Corresponding provinces (e.g., Ontario, British Columbia).</li>
+    <li>Libraries and Packages:</li>
+    <li>Year: From 2019 to 2023.</li>
+  <li>Month: January to December.</li>
+  <li>Rental Type: Apartment, Condo, Detached House, Townhouse.</li>
+  <li>Number of Bedrooms: 1, 2, 3, 4, etc.</li>
+  <li>Number of Bathrooms: 1, 2, 3, etc.</li>
+  <li>Square Footage: Ranges for different rental types.</li>
+  <li>Furnished: Yes/No.</li>
+  <li>Pet Friendly: Yes/No.</li>
+  <li>Parking Included: Yes/No.</li>
+  <li>Distance to City Center (km): Numeric value.</li>
+  <li>Monthly Rent (Target): Dependent variable, with realistic pricing trends.</li>
+  <li>Walk Score: A score between 0 and 100 indicating walkability.</li>
+  <li>Transit Score: A score between 0 and 100 indicating access to public transit.</li>
+  <li>Age of Building: Number of years since the building was constructed.</li>
+  <li>Energy Efficiency Rating: Numeric score (e.g., 0–10).</li>
+  <li>Lease Term: Length of the lease in months (e.g., 6, 12, 24).</li>
+  <li>Noise Level: Numeric score (e.g., 1–10, with 10 being very noisy).</li>
+  <li>Nearby Schools Rating: Average rating of schools in the area (1–10).</li>
+  <li>Internet Availability: Yes/No indicating high-speed internet availability.</li>
+  <li>Crime Rate Index: A score representing the area's safety.</li>
+  <li>Annual Property Tax: Approximation based on rent and location.</li>
+  </ul>
+
+
+<b>2.	Realism:</b>
+<ul>
+<li>Average monthly rent should reflect the general cost of living in each city. For example, Vancouver and Toronto should have higher average rents compared to Edmonton or Halifax.</li>
+<li>Include a range of rental prices within cities to capture variability (e.g., downtown areas vs. suburban neighborhoods).</li>
+<li>Use realistic distributions for rental prices, square footage, and proximity to transit. For instance, apartments should generally be smaller and less expensive than single-family homes.</li>
+</ul>
+
+<b>3.	Additional Notes:</b>
+<ul>
+<li>Include 10,000 rows of data distributed proportionally across cities.</li>
+<li>Reflect seasonality and trends where applicable (e.g., higher prices in Toronto and Vancouver for smaller units due to demand).</li>
+<li>Ensure property types align with city norms (e.g., more condos in downtown Toronto, more single-family homes in Calgary suburbs).</li>
+</ul>
+</i>
+
 
 ## Data Cleaning
+
 
 ## Exploratory Data Analysis
 
 ## Model Building
 
 ## Model Performance
+<b>Linear Regression Model:</b>
+  <ul>
+    <li><b>RMSE:</b> 114799.009005</li>
+    <li><b>R^2 Score:</b> 0.935382</li>
+   <li><b>Average MSE from Cross-Validation:</b> 626996.754116</li>
+    </ul>
+<b>Random Forest Regressor:</b>
+  <ul>
+    <li><b>RMSE:</b> 34611.563041</li>
+    <li><b>R^2 Score:</b> 0.980581</li>
+   <li><b>Average MSE from Cross-Validation:</b> 716345.255222</li>
+    </ul>
