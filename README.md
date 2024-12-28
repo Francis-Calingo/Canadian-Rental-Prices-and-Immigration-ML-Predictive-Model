@@ -76,8 +76,12 @@ The following ChatGPT prompt was used to generate our synthetic data:
   <ul>
     <li>Target Variable=MonthlyRent</li>
     <li>Feature variables categorized into three types: Categorical Variables, Discrete Variables and Continuous Variables.</li>
-    <li>Pairwise plots were produced using Seaborn to identify patterns and relationships.![Image1 README Canadian Immigration Rent Project](https://github.com/user-attachments/assets/4f01929a-02bb-4df9-bf11-6f60d533ffeb)
- </li>
+    <li>Pairwise plots were produced using Seaborn to identify patterns and relationships.</li>
+  </ul>
+  
+![image](https://github.com/user-attachments/assets/49096bf0-eb45-4adb-bafb-11d2a8a7bd10)
+
+  <ul>
     <li>The following features had the most influence on MonthlyRent, and to be used for model building: City, RentalType, Year, Month, Bedrooms, 
 SquareFootage, and AnnualPropertyTax.</li>
     <li>Performed Categorical Encoding and Standardized Scaling for pre-processing pipeline, where:</li>
@@ -87,10 +91,10 @@ SquareFootage, and AnnualPropertyTax.</li>
       <li>Discrete variables=Year, Month, Bedrooms, SquareFootage, Admissions</li>
       <li>Continuous variables=AnnualPropertyTax</li>
     </ul>
-    
-## Model Building
 
-Steps for model selection (both linear regression and random forest regressor):
+## Model Building
+<ul>
+    <li>Steps for model selection (both linear regression and random forest regressor):</li>
     <ul>
       <li>(1) Define target (y) and features (X) </li>
       <li>(2) Encode categorical features</li>
@@ -100,7 +104,7 @@ Steps for model selection (both linear regression and random forest regressor):
       <li>(6) Make predictions on test set</li>
       <li>(7) Evaluate model</li>
       <li>(8) Perform k-fold cross-validation (k=5)</li>
-    </ul>
+      </ul>
     <li>Performed hyperparameter tuning on random forest regressor using GridSearchCV.</li>
   </ul>
   
@@ -121,7 +125,16 @@ Steps for model selection (both linear regression and random forest regressor):
 Random Forest Regressor performed better. As it is more suited for non-linear data, suggesting data's non-linearity.
 
 ## Predictions
+![image](https://github.com/user-attachments/assets/75376878-ca52-4a8a-b331-13c643545bc9)
 
+![image](https://github.com/user-attachments/assets/df9238ad-b39d-4980-80db-531eb75f56d3)
 
+![image](https://github.com/user-attachments/assets/9b177835-2b3f-4a67-965d-f05782729f03)
+
+![image](https://github.com/user-attachments/assets/20560199-0a42-4c34-ac35-cef9e795058a)
+
+![image](https://github.com/user-attachments/assets/1e33eec0-f6db-4a03-a0b3-18add97aebf1)
+
+![image](https://github.com/user-attachments/assets/9820949b-34ca-497c-94fd-241e8bf13eb1)
 
 
