@@ -3,8 +3,8 @@
   <ul>
     <li>Predict Rental Prices across 6 major Canadian cities in 2025 given permanent resident data and rental price data.</li>
     <li>Scraped Permanent Resident Admissions data (since 2015) from Immigration, Refugees and Citizenship Canada.</li>
-    <li>Generated synthetic rental price data using a comprehensive ChatGPT prompt to compensate for lack of propietary data.</li>
-    <li>Performed Hyperparamter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.</li>
+    <li>Generated synthetic rental price data using a comprehensive ChatGPT prompt to compensate for lack of proprietary data.</li>
+    <li>Performed Hyperparameter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.</li>
   </ul>
   
 ## Code and Resources Used
