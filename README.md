@@ -1,5 +1,17 @@
 # GROUP PROJECT OVERVIEW: Machine Learning Predictive Model, Canadian Immigration and Rental Prices
 
+## Table of Contents
+* [Introduction](#introduction)
+* [Code and Resources Used](#code-and-resources-used)
+* [Web Scraping](#web-scraping)
+* [Feature Engineering](#feature-engineering)
+* [Data Cleaning & Exploratory Data Analysis](#data-cleaning--exploratory-data-analysis)
+* [Model Building](#model-building)
+* [Model Performance](#model-performance)
+* [Predictions](#predictions)
+
+## Introduction
+
   <ul>
     <li>Predict Rental Prices across 6 major Canadian cities in 2025 given permanent resident data and rental price data.</li>
     <li>Scraped Permanent Resident Admissions data (since 2015) from Immigration, Refugees and Citizenship Canada.</li>
