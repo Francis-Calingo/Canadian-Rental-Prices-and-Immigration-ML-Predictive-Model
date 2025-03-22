@@ -10,7 +10,7 @@
 * [Model Performance](#model-performance)
 * [Predictions](#predictions)
 
-## Introduction
+<details><summary><h2>Introduction</h2></summary> 
 
   <ul>
     <li>Predict Rental Prices across 6 major Canadian cities in 2025 given permanent resident data and rental price data.</li>
@@ -18,8 +18,11 @@
     <li>Generated synthetic rental price data using a comprehensive ChatGPT prompt to compensate for lack of proprietary data.</li>
     <li>Performed Hyperparameter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.</li>
   </ul>
-  
-## Code and Resources Used
+
+</details>
+
+<details><summary><h2>Code and Resources Used</h2></summary> 
+ 
   <ul>
     <li><b>IDEs Used:</b> Google Colab, Jupyter Notebook</li>
     <li><b>Python Version:</b> 3.10.12</li>
@@ -30,11 +33,15 @@
     </ul></li>
     <li><b>ChatGPT version:</b> GPT-4</li>
   </ul>
-  
-## Web Scraping
-Permanent Residence admission Data was scraped from this website: https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda/resource/81021dfd-c110-42cf-a975-1b9be8b82980 
+</details>
 
-## Feature Engineering
+<details><summary><h2>Web Scraping</h2></summary> 
+
+Permanent Residence admission Data was scraped from this website: https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda/resource/81021dfd-c110-42cf-a975-1b9be8b82980 
+</details>
+
+<details><summary><h2>Feature Engineering</h2></summary> 
+
 The following ChatGPT prompt was used to generate our synthetic data:
 
 <i>Generate a realistic dataset of rental prices for major Canadian cities, including Vancouver, Toronto, Montreal, Calgary, Ottawa, Edmonton, and Halifax. The dataset should include:</i>
@@ -82,9 +89,10 @@ The following ChatGPT prompt was used to generate our synthetic data:
 <li>Ensure property types align with city norms (e.g., more condos in downtown Toronto, more single-family homes in Calgary suburbs).</li>
 </ul>
 </i>
+</details>
 
+<details><summary><h2>Data Cleaning & Exploratory Data Analysis</h2></summary> 
 
-## Data Cleaning & Exploratory Data Analysis
   <ul>
     <li>Target Variable=MonthlyRent</li>
     <li>Feature variables categorized into three types: Categorical Variables, Discrete Variables and Continuous Variables.</li>
@@ -104,7 +112,10 @@ SquareFootage, and AnnualPropertyTax.</li>
       <li>Continuous variables=AnnualPropertyTax</li>
     </ul>
 
-## Model Building
+</details>
+
+<details><summary><h2>Model Building</h2></summary> 
+
 <ul>
     <li>Steps for model selection (both linear regression and random forest regressor):</li>
     <ul>
@@ -119,8 +130,11 @@ SquareFootage, and AnnualPropertyTax.</li>
       </ul>
     <li>Performed hyperparameter tuning on random forest regressor using GridSearchCV.</li>
   </ul>
-  
-## Model Performance
+
+</details>
+
+<details><summary><h2>Model Performance</h2></summary> 
+
 <b>Linear Regression Model:</b>
   <ul>
     <li><b>RMSE:</b> 114799.009005</li>
@@ -136,7 +150,10 @@ SquareFootage, and AnnualPropertyTax.</li>
 
 Random Forest Regressor performed better. As it is more suited for non-linear data, suggesting data's non-linearity.
 
-## Predictions
+</details>
+
+<details><summary><h2>Predictions</h2></summary> 
+
 ![image](https://github.com/user-attachments/assets/75376878-ca52-4a8a-b331-13c643545bc9)
 
 ![image](https://github.com/user-attachments/assets/df9238ad-b39d-4980-80db-531eb75f56d3)
@@ -149,4 +166,4 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 
 ![image](https://github.com/user-attachments/assets/9820949b-34ca-497c-94fd-241e8bf13eb1)
 
-
+</details>
