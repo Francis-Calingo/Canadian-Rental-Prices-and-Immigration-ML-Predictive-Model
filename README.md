@@ -9,6 +9,7 @@
 * [Model Building](#model-building)
 * [Model Performance](#model-performance)
 * [Predictions](#predictions)
+* [Discussion](#discussion)
 
 <details><summary><h2>Introduction</h2></summary> 
 
@@ -165,5 +166,16 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 ![image](https://github.com/user-attachments/assets/1e33eec0-f6db-4a03-a0b3-18add97aebf1)
 
 ![image](https://github.com/user-attachments/assets/9820949b-34ca-497c-94fd-241e8bf13eb1)
+
+</details>
+
+<details><summary><h2>Discussion</h2></summary> 
+
+
+<P>After completing our prediction using Random Forest Regressor, we can observe that 2025 rental prices appear lower in many cities (i.e. Vancouver, Montreal and Calgary). Additionally, by observing feature importances, it is clear that PR admissions, while not the most important feature, does meaningfully contribute to the model’s ability to predict rental prices. As such, we can reject the null hypothesis that the new PR admission targets will not reduce rental accommodation costs in Canada. </P>
+
+<P>By using synthetic data for rental prices, we were able to build a well performing, generalized model that can be used to predict economic impacts relative to immigration policies. Synthetic data is a useful tool businesses and policy makers can leverage to demonstrate technical capabilities, and serve as a proof of concept in order to justify any capital expenses required to gather real-world, proprietary data. While the prompt required ChatGPT to provide realistic data, future EDA could be done with real-world proprietary data to compare how realistic synthetic data was.</P>
+
+<P>Visualizing rental prices side-by-side with admissions data does show that rental prices in 2025 would decrease, but not by a significant margin. While the scope of this report was aimed to examine the impact of permanent resident admissions, future studies could leverage temporary resident (TR) immigration targets. TR admissions and other immigration categories could be included to develop a more holistic analysis to understand the relationship between immigration policy and Canada’s economic outlook.</P>
 
 </details>
