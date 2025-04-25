@@ -2,7 +2,7 @@
 
 ## Table of Contents
 * [Introduction](#introduction)
-* [Code and Resources Used](#code-and-resources-used)
+* [Code and Setup](#code-and-setup)
 * [Web Scraping](#web-scraping)
 * [Feature Engineering](#feature-engineering)
 * [Data Cleaning & Exploratory Data Analysis](#data-cleaning--exploratory-data-analysis)
@@ -20,9 +20,10 @@
     <li>Performed Hyperparameter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.</li>
   </ul>
 
+[<b>Back to Table of Contents</b>](#table-of-contents)
 </details>
 
-<details><summary><h2>Code and Resources Used</h2></summary> 
+<details><summary><h2>Code and Setup</h2></summary> 
  
   <ul>
     <li><b>IDEs Used:</b> Google Colab, Jupyter Notebook</li>
@@ -34,6 +35,18 @@
     </ul></li>
     <li><b>ChatGPT version:</b> GPT-4</li>
   </ul>
+
+```bash
+git clone https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model.git
+cd Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model
+```
+
+To install the necessary Python libraries and packages:
+```bash
+pip install -r requirements.txt
+```
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
 </details>
 
 <details><summary><h2>Web Scraping</h2></summary> 
@@ -90,6 +103,8 @@ The following ChatGPT prompt was used to generate our synthetic data:
 <li>Ensure property types align with city norms (e.g., more condos in downtown Toronto, more single-family homes in Calgary suburbs).</li>
 </ul>
 </i>
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
 </details>
 
 <details><summary><h2>Data Cleaning & Exploratory Data Analysis</h2></summary> 
@@ -113,6 +128,7 @@ SquareFootage, and AnnualPropertyTax.</li>
       <li>Continuous variables=AnnualPropertyTax</li>
     </ul>
 
+[<b>Back to Table of Contents</b>](#table-of-contents)
 </details>
 
 <details><summary><h2>Model Building</h2></summary> 
@@ -132,6 +148,7 @@ SquareFootage, and AnnualPropertyTax.</li>
     <li>Performed hyperparameter tuning on random forest regressor using GridSearchCV.</li>
   </ul>
 
+[<b>Back to Table of Contents</b>](#table-of-contents)
 </details>
 
 <details><summary><h2>Model Performance</h2></summary> 
@@ -151,6 +168,7 @@ SquareFootage, and AnnualPropertyTax.</li>
 
 Random Forest Regressor performed better. As it is more suited for non-linear data, suggesting data's non-linearity.
 
+[<b>Back to Table of Contents</b>](#table-of-contents)
 </details>
 
 <details><summary><h2>Predictions</h2></summary> 
@@ -167,6 +185,7 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 
 ![image](https://github.com/user-attachments/assets/9820949b-34ca-497c-94fd-241e8bf13eb1)
 
+[<b>Back to Table of Contents</b>](#table-of-contents)
 </details>
 
 <details><summary><h2>Discussion</h2></summary> 
@@ -177,5 +196,7 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 <P>By using synthetic data for rental prices, we were able to build a well performing, generalized model that can be used to predict economic impacts relative to immigration policies. Synthetic data is a useful tool businesses and policy makers can leverage to demonstrate technical capabilities, and serve as a proof of concept in order to justify any capital expenses required to gather real-world, proprietary data. While the prompt required ChatGPT to provide realistic data, future EDA could be done with real-world proprietary data to compare how realistic synthetic data was.</P>
 
 <P>Visualizing rental prices side-by-side with admissions data does show that rental prices in 2025 would decrease, but not by a significant margin. While the scope of this report was aimed to examine the impact of permanent resident admissions, future studies could leverage temporary resident (TR) immigration targets. TR admissions and other immigration categories could be included to develop a more holistic analysis to understand the relationship between immigration policy and Canada’s economic outlook.</P>
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
 
 </details>
