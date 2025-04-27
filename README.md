@@ -10,6 +10,7 @@
 * [Model Performance](#model-performance)
 * [Predictions](#predictions)
 * [Discussion](#discussion)
+* [Credits and Acknowledgements](#credits-and-acknowledgements)
 
 <details><summary><h2>Introduction</h2></summary> 
 
@@ -196,6 +197,20 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 <P>By using synthetic data for rental prices, we were able to build a well performing, generalized model that can be used to predict economic impacts relative to immigration policies. Synthetic data is a useful tool businesses and policy makers can leverage to demonstrate technical capabilities, and serve as a proof of concept in order to justify any capital expenses required to gather real-world, proprietary data. While the prompt required ChatGPT to provide realistic data, future EDA could be done with real-world proprietary data to compare how realistic synthetic data was.</P>
 
 <P>Visualizing rental prices side-by-side with admissions data does show that rental prices in 2025 would decrease, but not by a significant margin. While the scope of this report was aimed to examine the impact of permanent resident admissions, future studies could leverage temporary resident (TR) immigration targets. TR admissions and other immigration categories could be included to develop a more holistic analysis to understand the relationship between immigration policy and Canada’s economic outlook.</P>
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
+
+</details>
+
+<details><summary><h2>Credits and Acknowledgements</h2></summary> 
+
+Great Learning. “RMSE: What Does It Mean?” Medium, 26 Apr. 2021, https://medium.com/@mygreatlearning/rmse-what-does-it-mean-2d446c0b1d0e.
+
+“R-Squared in Regression Analysis in Machine Learning.” GeeksforGeeks, 7 May 2019, https://www.geeksforgeeks.org/ml-r-squared-in-regression-analysis/.
+
+"What Is Synthetic Data?" MOSTLY AI. 24 Sept. 2021, https://mostly.ai/what-is-synthetic-data.
+
+"What Is Prompt Engineering?" McKinsey. https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-prompt-engineering. 
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
