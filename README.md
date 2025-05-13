@@ -12,7 +12,9 @@
 * [Discussion](#discussion)
 * [Credits and Acknowledgements](#credits-and-acknowledgements)
 
-<details><summary><h2>Introduction</h2></summary> 
+---
+
+# Introduction
 
   <ul>
     <li>Predict Rental Prices across 6 major Canadian cities in 2025 given permanent resident data and rental price data.</li>
@@ -22,9 +24,10 @@
   </ul>
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
-</details>
 
-<details><summary><h2>Code and Setup</h2></summary> 
+---
+
+# Code and Setup
  
   <ul>
     <li><b>IDEs Used:</b> Google Colab, Jupyter Notebook</li>
@@ -48,14 +51,14 @@ pip install -r requirements.txt
 ```
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
-</details>
 
-<details><summary><h2>Web Scraping</h2></summary> 
+---
+
+# Web Scraping
 
 Permanent Residence admission Data was scraped from this website: https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda/resource/81021dfd-c110-42cf-a975-1b9be8b82980 
-</details>
 
-<details><summary><h2>Feature Engineering</h2></summary> 
+# Feature Engineering
 
 The following ChatGPT prompt was used to generate our synthetic data:
 
@@ -106,9 +109,10 @@ The following ChatGPT prompt was used to generate our synthetic data:
 </i>
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
-</details>
 
-<details><summary><h2>Data Cleaning & Exploratory Data Analysis</h2></summary> 
+---
+
+# Data Cleaning & Exploratory Data Analysis
 
   <ul>
     <li>Target Variable=MonthlyRent</li>
@@ -130,9 +134,10 @@ SquareFootage, and AnnualPropertyTax.</li>
     </ul>
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
-</details>
 
-<details><summary><h2>Model Building</h2></summary> 
+---
+
+# Model Building
 
 <ul>
     <li>Steps for model selection (both linear regression and random forest regressor):</li>
@@ -152,7 +157,9 @@ SquareFootage, and AnnualPropertyTax.</li>
 [<b>Back to Table of Contents</b>](#table-of-contents)
 </details>
 
-<details><summary><h2>Model Performance</h2></summary> 
+---
+
+# Model Performance
 
 <b>Linear Regression Model:</b>
   <ul>
@@ -170,9 +177,10 @@ SquareFootage, and AnnualPropertyTax.</li>
 Random Forest Regressor performed better. As it is more suited for non-linear data, suggesting data's non-linearity.
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
-</details>
 
-<details><summary><h2>Predictions</h2></summary> 
+---
+
+# Predictions
 
 ![image](https://github.com/user-attachments/assets/75376878-ca52-4a8a-b331-13c643545bc9)
 
@@ -187,9 +195,10 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 ![image](https://github.com/user-attachments/assets/9820949b-34ca-497c-94fd-241e8bf13eb1)
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
-</details>
 
-<details><summary><h2>Discussion</h2></summary> 
+---
+
+# Discussion
 
 
 <P>After completing our prediction using Random Forest Regressor, we can observe that 2025 rental prices appear lower in many cities (i.e. Vancouver, Montreal and Calgary). Additionally, by observing feature importances, it is clear that PR admissions, while not the most important feature, does meaningfully contribute to the model’s ability to predict rental prices. As such, we can reject the null hypothesis that the new PR admission targets will not reduce rental accommodation costs in Canada. </P>
@@ -200,9 +209,9 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
-</details>
+---
 
-<details><summary><h2>Credits and Acknowledgements</h2></summary> 
+# Credits and Acknowledgements
 
 Great Learning. “RMSE: What Does It Mean?” Medium, 26 Apr. 2021, https://medium.com/@mygreatlearning/rmse-what-does-it-mean-2d446c0b1d0e.
 
@@ -213,5 +222,3 @@ Great Learning. “RMSE: What Does It Mean?” Medium, 26 Apr. 2021, https://med
 "What Is Prompt Engineering?" McKinsey. https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-prompt-engineering. 
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
-
-</details>
