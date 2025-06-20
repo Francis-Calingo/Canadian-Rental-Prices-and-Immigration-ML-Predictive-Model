@@ -62,51 +62,48 @@ Permanent Residence admission Data was scraped from this website: https://open.c
 
 The following ChatGPT prompt was used to generate our synthetic data:
 
-<i>Generate a realistic dataset of rental prices for major Canadian cities, including Vancouver, Toronto, Montreal, Calgary, Ottawa, Edmonton, and Halifax. The dataset should include:</i>
+```
+Generate a realistic dataset of rental prices for major Canadian cities, including Vancouver, Toronto, Montreal, Calgary, Ottawa, Edmonton, and Halifax. The dataset should include:
 
-<i><b>1.	Data Columns:</b>
-<ul>
-    <li>City: Major cities like Toronto, Vancouver, Montreal, Calgary, etc.</li>
-    <li>Province: Corresponding provinces (e.g., Ontario, British Columbia).</li>
-    <li>Libraries and Packages:</li>
-    <li>Year: From 2019 to 2023.</li>
-  <li>Month: January to December.</li>
-  <li>Rental Type: Apartment, Condo, Detached House, Townhouse.</li>
-  <li>Number of Bedrooms: 1, 2, 3, 4, etc.</li>
-  <li>Number of Bathrooms: 1, 2, 3, etc.</li>
-  <li>Square Footage: Ranges for different rental types.</li>
-  <li>Furnished: Yes/No.</li>
-  <li>Pet Friendly: Yes/No.</li>
-  <li>Parking Included: Yes/No.</li>
-  <li>Distance to City Center (km): Numeric value.</li>
-  <li>Monthly Rent (Target): Dependent variable, with realistic pricing trends.</li>
-  <li>Walk Score: A score between 0 and 100 indicating walkability.</li>
-  <li>Transit Score: A score between 0 and 100 indicating access to public transit.</li>
-  <li>Age of Building: Number of years since the building was constructed.</li>
-  <li>Energy Efficiency Rating: Numeric score (e.g., 0–10).</li>
-  <li>Lease Term: Length of the lease in months (e.g., 6, 12, 24).</li>
-  <li>Noise Level: Numeric score (e.g., 1–10, with 10 being very noisy).</li>
-  <li>Nearby Schools Rating: Average rating of schools in the area (1–10).</li>
-  <li>Internet Availability: Yes/No indicating high-speed internet availability.</li>
-  <li>Crime Rate Index: A score representing the area's safety.</li>
-  <li>Annual Property Tax: Approximation based on rent and location.</li>
-  </ul>
+1.	Data Columns:
 
+-City: Major cities like Toronto, Vancouver, Montreal, Calgary, etc.
+-Province: Corresponding provinces (e.g., Ontario, British Columbia).
+-Year: From 2019 to 2023.
+-Month: January to December.
+-Rental Type: Apartment, Condo, Detached House, Townhouse.
+-Number of Bedrooms: 1, 2, 3, 4, etc.
+-Number of Bathrooms: 1, 2, 3, etc.
+-Square Footage: Ranges for different rental types.
+-Furnished: Yes/No.
+-Pet Friendly: Yes/No.
+-Parking Included: Yes/No.
+-Distance to City Center (km): Numeric value.
+-Monthly Rent (Target): Dependent variable, with realistic pricing trends.
+-Walk Score: A score between 0 and 100 indicating walkability.
+-Transit Score: A score between 0 and 100 indicating access to public transit.
+-Age of Building: Number of years since the building was constructed.
+-Energy Efficiency Rating: Numeric score (e.g., 0–10).
+-Lease Term: Length of the lease in months (e.g., 6, 12, 24).
+-Noise Level: Numeric score (e.g., 1–10, with 10 being very noisy).
+-Nearby Schools Rating: Average rating of schools in the area (1–10).
+-Internet Availability: Yes/No indicating high-speed internet availability.
+-Crime Rate Index: A score representing the area's safety.
+-Annual Property Tax: Approximation based on rent and location.
 
-<b>2.	Realism:</b>
-<ul>
-<li>Average monthly rent should reflect the general cost of living in each city. For example, Vancouver and Toronto should have higher average rents compared to Edmonton or Halifax.</li>
-<li>Include a range of rental prices within cities to capture variability (e.g., downtown areas vs. suburban neighborhoods).</li>
-<li>Use realistic distributions for rental prices, square footage, and proximity to transit. For instance, apartments should generally be smaller and less expensive than single-family homes.</li>
-</ul>
+2.	Realism:
 
-<b>3.	Additional Notes:</b>
-<ul>
-<li>Include 10,000 rows of data distributed proportionally across cities.</li>
-<li>Reflect seasonality and trends where applicable (e.g., higher prices in Toronto and Vancouver for smaller units due to demand).</li>
-<li>Ensure property types align with city norms (e.g., more condos in downtown Toronto, more single-family homes in Calgary suburbs).</li>
-</ul>
-</i>
+-Average monthly rent should reflect the general cost of living in each city. For example, Vancouver and Toronto should have higher average rents compared to Edmonton or Halifax.
+-Include a range of rental prices within cities to capture variability (e.g., downtown areas vs. suburban neighborhoods).
+-Use realistic distributions for rental prices, square footage, and proximity to transit. For instance, apartments should generally be smaller and less expensive than single-family homes.
+
+3.	Additional Notes:
+
+-Include 10,000 rows of data distributed proportionally across cities.
+-Reflect seasonality and trends where applicable (e.g., higher prices in Toronto and Vancouver for smaller units due to demand).
+-Ensure property types align with city norms (e.g., more condos in downtown Toronto, more single-family homes in Calgary suburbs).
+
+```
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
