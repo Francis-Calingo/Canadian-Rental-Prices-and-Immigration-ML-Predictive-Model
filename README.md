@@ -1,6 +1,6 @@
 # GROUP PROJECT OVERVIEW: Machine Learning Predictive Model, Canadian Immigration and Rental Prices
 
-## Table of Contents
+# Table of Contents
 * [Introduction](#introduction)
 * [Code and Setup](#code-and-setup)
 * [Web Scraping](#web-scraping)
@@ -57,6 +57,8 @@ pip install -r requirements.txt
 # Web Scraping
 
 Permanent Residence admission Data was scraped from this website: https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda/resource/81021dfd-c110-42cf-a975-1b9be8b82980 
+
+---
 
 # Feature Engineering
 
