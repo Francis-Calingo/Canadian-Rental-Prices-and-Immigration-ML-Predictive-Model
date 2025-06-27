@@ -15,7 +15,7 @@
 ---
 
 # Introduction
-With both housing prices and immigration levels reaching record (or near-record) highs in Canada, it's no surprise that immigration and housing have become hotly-debated topics in the country in recent years. Some have gone as far as to claim that the high housing costs are directly connected to high levels of immigration. We decided that this presented a good opportunity to use our knowledge in machine learning models, and attempt to build a predictive regression model to predict rental prices across 6 major Canadian metropolitan areas given permanent resident data and rental price data.
+With both housing prices and immigration levels reaching record (or near-record) highs in Canada, it's no surprise that immigration and housing have become hotly-debated topics in the country in recent years. Some have gone as far as to claim that the high housing costs are directly connected to high levels of immigration. We decided that this presented a good opportunity to use our knowledge in machine learning models, and check the veracity of those claims by attempting to build a predictive regression model to predict rental prices across 6 major Canadian metropolitan areas given permanent resident data and rental price data.
 
 
   <ul>
