@@ -17,13 +17,6 @@
 # Introduction
 With both housing prices and immigration levels reaching record (or near-record) highs in Canada, it's no surprise that immigration and housing have become hotly-debated topics in the country in recent years. Some have gone as far as to claim that the high housing costs are directly connected to high levels of immigration. We decided that this presented a good opportunity to use our knowledge in machine learning models, and check the veracity of those claims by attempting to build a predictive regression model to predict rental prices across 6 major Canadian metropolitan areas given permanent resident data and rental price data.
 
-
-  <ul>
-    <li>Scraped Permanent Resident Admissions data (since 2015) from Immigration, Refugees and Citizenship Canada.</li>
-    <li>Generated synthetic rental price data using a comprehensive ChatGPT prompt to compensate for lack of proprietary data.</li>
-    <li>Performed Hyperparameter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.</li>
-  </ul>
-
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
 ---
@@ -57,19 +50,19 @@ pip install -r requirements.txt
 
 # Step-by-step Guide
 
-**STEP 1: Problem Definition:** How much will the homes cost? Since house prices are a continuous variable, this is a regression problem.
+**STEP 1: Problem Definition:** Will new permanent resident targets set out by the federal government decrease rental prices across Canada? Since rental prices are a continuous variable, this is a regression problem.
 
-**STEP 2: Data Gathering:** I used the USA_Housing dataset, which I got access to through the Kaggle: House Prices - Advanced Regression Techniques.
+**STEP 2: Data Gathering:** We scraped Permanent Resident Admissions data (since 2015) from Immigration, Refugees and Citizenship Canada, and enerated synthetic rental price data using a comprehensive ChatGPT prompt to compensate for lack of proprietary data.
 
-**STEP 3: Data Preparation:** I prepared the data by using scaling methods..
+**STEP 3: Data Preparation:** We prepared the data by using scaling methods.
 
-**STEP 4: EDA (Exploratory Data Analysis):** It is important to use descriptive and graphical statistics to look for patterns, correlations, and comparisons in the dataset. In this step, I used heatmaps and correlation matrices to analyze the data.
+**STEP 4: EDA (Exploratory Data Analysis):** It is important to use descriptive and graphical statistics to look for patterns, correlations, and comparisons in the dataset. In this step, we used heatmaps and correlation matrices to analyze the data.
 
-**STEP 5: Data Modelling:** In this project, I used different linear regression methods including Linear Regression, Robust Regression, Ridge Regression, LASSO Regression, Polynomial Regression, Stochastic Gradient Descent, Artficial Neural Network, Random Forest Regressor and Support Vector Machine.
+**STEP 5: Data Modelling:** In this project, we used Linear Regression and Random Forest Regressor.
 
-**STEP 6: Validate Model:** After training the model, I used cross-validation techniques to validate the model.
+**STEP 6: Validate Model:** After training the model, we used cross-validation techniques to validate the model.
 
-**STEP 7: Optimize Model:** In this particular project, I didn't focus on optimizing the model, but used the models from sklearn with constant parameters. Parameter optimization will be a future improvement that I will be working on.
+**STEP 7: Optimize Model:** We performed Hyperparameter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
@@ -77,19 +70,22 @@ pip install -r requirements.txt
 
 # Problem Definition
 
+In October 2024, Canadian Prime Minister Justin Trudeau announced a significant reduction in immigration targets previously set for 2025 - 2027, including a 21% decrease in the number of permanent residents (PR) being admitted into the country. As cited by the federal government, in order to relieve major sectors of Canada’s infrastructure, such as the rental and housing markets, permanent resident targets will be reduced from half a million admissions to 395,000. The objective of this report was to determine whether or not reductions in immigration targets set out by the Government of Canada will in fact reduce prices in the rented accommodation market. By using supervised learning, and specifically regression to predict rental prices in Canada, this analysis can determine the degree of impact that changes in PR admissions will have on the average cost of renting a home in Canada.
+
+**H<sub>0</sub>: "New PR admissions targets will not reduce rental accommodation costs in Canada"**
+
+
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
 ---
 
 # Data Gathering
 
+## Webscraping Immigration Data
+
 Permanent Residence admission Data was scraped from this website: https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda/resource/81021dfd-c110-42cf-a975-1b9be8b82980 
 
-[<b>Back to Table of Contents</b>](#table-of-contents)
-
----
-
-# Feature Engineering
+## Feature Engineering with Synthetic Rental Data
 
 The following ChatGPT prompt was used to generate our synthetic data:
 
