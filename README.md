@@ -136,13 +136,7 @@ Generate a realistic dataset of rental prices for major Canadian cities, includi
 
 ---
 
-# Data Preparation
-
-[<b>Back to Table of Contents</b>](#table-of-contents)
-
----
-
-# Exploratory Data Analysis
+# Data Prreparation and Exploratory Data Analysis
 
   <ul>
     <li>Target Variable=MonthlyRent</li>
