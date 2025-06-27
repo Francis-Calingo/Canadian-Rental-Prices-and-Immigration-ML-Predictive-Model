@@ -60,7 +60,7 @@ pip install -r requirements.txt
 
 **STEP 5: Data Modelling:** In this project, we used Linear Regression and Random Forest Regressor.
 
-**STEP 6: Validate Model:** After training the model, we used cross-validation techniques to validate the model.
+**STEP 6: Validate Model:** After training the model, we carried out cross-validation using k-fold cross validation technique to assess model performance and generalization.
 
 **STEP 7: Optimize Model:** We performed Hyperparameter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.
 
@@ -188,6 +188,8 @@ SquareFootage, and AnnualPropertyTax.</li>
 ---
 
 # Model Building
+
+## Model Building Steps
 
 <ul>
     <li>Steps for model selection (both linear regression and random forest regressor):</li>
