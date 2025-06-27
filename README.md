@@ -154,6 +154,15 @@ df_rental = pd.read_csv(csv_file)
 df_rental.tail()
 ```
 
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/EDA1.png"/>
+
+```jupyter
+# read xlsx file for the pr data with city and date
+xlsx_file = 'PR_Admissions_unpivoted.xlsx'
+df_pr= pd.read_excel(xlsx_file)
+df_pr.tail()
+```
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/EDA2.png"/>
 
   <ul>
     <li>Target Variable=MonthlyRent</li>
@@ -196,7 +205,6 @@ SquareFootage, and AnnualPropertyTax.</li>
   </ul>
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
-</details>
 
 ---
 
