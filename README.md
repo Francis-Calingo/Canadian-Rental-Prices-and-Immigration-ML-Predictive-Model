@@ -214,17 +214,17 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 
 # Predictions
 
-<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure2.png"/>
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Toronto%20Prediction.png"/>
 
-<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure3.png"/>
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Montreal%20Prediction.png"/>
 
-<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure4.png"/>
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Vancouver%20Prediction.png"/>
 
-<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure5.png"/>
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Calgary%20Prediction.png"/>
 
-<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure6.png"/>
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Edmonton%20Prediction.png"/>
 
-<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure7.png"/>
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Ottawa%20Prediction.png"/>
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
