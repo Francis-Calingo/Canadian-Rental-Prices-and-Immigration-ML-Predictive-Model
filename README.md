@@ -119,7 +119,7 @@ Generate a realistic dataset of rental prices for major Canadian cities, includi
     <li>Pairwise plots were produced using Seaborn to identify patterns and relationships.</li>
   </ul>
   
-![image](https://github.com/user-attachments/assets/49096bf0-eb45-4adb-bafb-11d2a8a7bd10)
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure1.png"/>
 
   <ul>
     <li>The following features had the most influence on MonthlyRent, and to be used for model building: City, RentalType, Year, Month, Bedrooms, 
@@ -181,17 +181,17 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 
 # Predictions
 
-![image](https://github.com/user-attachments/assets/75376878-ca52-4a8a-b331-13c643545bc9)
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure2.png"/>
 
-![image](https://github.com/user-attachments/assets/df9238ad-b39d-4980-80db-531eb75f56d3)
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure3.png"/>
 
-![image](https://github.com/user-attachments/assets/9b177835-2b3f-4a67-965d-f05782729f03)
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure4.png"/>
 
-![image](https://github.com/user-attachments/assets/20560199-0a42-4c34-ac35-cef9e795058a)
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure5.png"/>
 
-![image](https://github.com/user-attachments/assets/1e33eec0-f6db-4a03-a0b3-18add97aebf1)
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure6.png"/>
 
-![image](https://github.com/user-attachments/assets/9820949b-34ca-497c-94fd-241e8bf13eb1)
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure7.png"/>
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
