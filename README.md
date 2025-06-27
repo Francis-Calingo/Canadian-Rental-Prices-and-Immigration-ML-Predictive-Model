@@ -136,7 +136,15 @@ Generate a realistic dataset of rental prices for major Canadian cities, includi
 
 ---
 
-# Data Prreparation and Exploratory Data Analysis
+# Data Preparation and Exploratory Data Analysis
+
+```jupyter
+# read csv file with rent by city
+import pandas as pd
+csv_file = 'synthetic_rental_prices_canada_updated.csv'
+df_rental = pd.read_csv(csv_file)
+df_rental.tail()
+```
 
   <ul>
     <li>Target Variable=MonthlyRent</li>
