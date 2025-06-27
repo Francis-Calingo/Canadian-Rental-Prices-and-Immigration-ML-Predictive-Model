@@ -15,9 +15,10 @@
 ---
 
 # Introduction
+With both housing prices and immigration levels reaching record (or near-record) highs in Canada, it's no surprise that immigration and housing have become hotly-debated topics in the country in recent years. Some have gone as far as to claim that the high housing costs are directly connected to high levels of immigration. We decided that this presented a good opportunity to use our knowledge in machine learning models, and attempt to build a predictive regression model to predict rental prices across 6 major Canadian metropolitan areas given permanent resident data and rental price data.
+
 
   <ul>
-    <li>Predict Rental Prices across 6 major Canadian cities in 2025 given permanent resident data and rental price data.</li>
     <li>Scraped Permanent Resident Admissions data (since 2015) from Immigration, Refugees and Citizenship Canada.</li>
     <li>Generated synthetic rental price data using a comprehensive ChatGPT prompt to compensate for lack of proprietary data.</li>
     <li>Performed Hyperparameter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.</li>
@@ -54,9 +55,31 @@ pip install -r requirements.txt
 
 ---
 
-# Web Scraping
+# Step-by-step Guide
+
+**STEP 1: Problem Definition:** How much will the homes cost? Since house prices are a continuous variable, this is a regression problem.
+**STEP 2: Data Gathering:** I used the USA_Housing dataset, which I got access to through the Kaggle: House Prices - Advanced Regression Techniques.
+**STEP 3: Data Preparation:** I prepared the data by using scaling methods..
+**STEP 4: EDA (Exploratory Data Analysis):** It is important to use descriptive and graphical statistics to look for patterns, correlations, and comparisons in the dataset. In this step, I used heatmaps and correlation matrices to analyze the data.
+**STEP 5: Data Modelling:** In this project, I used different linear regression methods including Linear Regression, Robust Regression, Ridge Regression, LASSO Regression, Polynomial Regression, Stochastic Gradient Descent, Artficial Neural Network, Random Forest Regressor and Support Vector Machine.
+**STEP 6: Validate Model:** After training the model, I used cross-validation techniques to validate the model.
+**STEP 7: Optimize Model:** In this particular project, I didn't focus on optimizing the model, but used the models from sklearn with constant parameters. Parameter optimization will be a future improvement that I will be working on.
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
+
+---
+
+# Problem Definition
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
+
+---
+
+# Data Gathering
 
 Permanent Residence admission Data was scraped from this website: https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda/resource/81021dfd-c110-42cf-a975-1b9be8b82980 
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
 
 ---
 
@@ -111,7 +134,13 @@ Generate a realistic dataset of rental prices for major Canadian cities, includi
 
 ---
 
-# Data Cleaning & Exploratory Data Analysis
+# Data Preparation
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
+
+---
+
+# Exploratory Data Analysis
 
   <ul>
     <li>Target Variable=MonthlyRent</li>
