@@ -231,6 +231,28 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 
 ---
 
+# Model Validation & Hyperparameter Tuning
+
+1) We ensured that our categorical columns were consistent (i.e., datatype set as string) 
+2) Set target variable name (i.e., target_variable=’MonthlyRent’) 
+3) Identify and set categorical and numerical columns 
+4) Exclude target variable from features 
+5) Separate target and features 
+6) Define preprocessing for categorical data 
+7) Define the Random Forest Model 
+8) Create a Pipeline, then define the parameter grid for tuning:
+ 9) Split the dataset into training and test sets 
+10) Perform grid search with Cross-Validation 
+11) Print the best parameters and score, then train the model with said parameters 
+
+[<b>Back to Table of Contents</b>](#table-of-contents)
+
+---
+
+# Model Evaluation
+
+---
+
 # Predictions
 
 <img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Toronto%20Prediction.png"/>
