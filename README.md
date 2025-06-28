@@ -6,10 +6,10 @@
 * [Step-by-Step Guide](#step-by-step-guide)
 * [Problem Definition](#problem-definition)
 * [Data Gathering](#data-gathering)
-* [Data Preparation & Exploratory Data Analysis](#data-cleaning-and-exploratory-data-analysis)
+* [Data Preparation and Exploratory Data Analysis](#data-preparation-and-exploratory-data-analysis)
 * [Model Building](#model-building)
 * [Model Performance](#model-performance)
-* [Model Validation and Hyperparamater Tuning](#model-building-and-hyperparameter-tuning)
+* [Model Validation and Hyperparamater Tuning](#model-validation-and-hyperparameter-tuning)
 * [Model Evaluation](#model-evaluation)
 * [Predictions](#predictions)
 * [Discussion](#discussion)
@@ -234,7 +234,7 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 
 ---
 
-# Model Validation & Hyperparameter Tuning
+# Model Validation and Hyperparameter Tuning
 
 1) We ensured that our categorical columns were consistent (i.e., datatype set as string) 
 2) Set target variable name (i.e., target_variable=’MonthlyRent’) 
