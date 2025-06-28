@@ -65,7 +65,12 @@ pip install -r requirements.txt
 
 **STEP 6: Validate Model:** After training the model, we carried out cross-validation using k-fold cross validation technique to assess model performance and generalization.
 
-**STEP 7: Optimize Model:** We performed Hyperparameter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.
+**STEP 7: Optimize Model with Hyperparameter Tuning:** We performed Hyperparameter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.
+
+**STEP 8: Evaluate Model:**
+
+**STEP 9: Make Predictions:**
+
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
