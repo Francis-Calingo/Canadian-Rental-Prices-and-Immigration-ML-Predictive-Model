@@ -254,6 +254,7 @@ print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
 To make our model selection varied, we opted to go for one model that worked best for determining linear relationships, and for the other model that worked best for handling non-linear relationships. We used the following two supervised learning regression models: Linear Regression and Random Forest Regressor. 
 
 **Linear Regression:** Following feature engineering, we split our data into training and testing sets (test size=20%).  Then, we trained the linear regression model, then made predictions on the training set.
+
 **Random Forest Regressor:** The algorithm is virtually the same as for the linear regression model, this time setting model=RandomForestRegressor() with n_estimators=100 and random_state=0.
 
 ## Model Building Steps
