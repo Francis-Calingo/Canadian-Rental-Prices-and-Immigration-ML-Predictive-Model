@@ -10,7 +10,6 @@
 * [Model Building](#model-building)
 * [Model Performance](#model-performance)
 * [Model Validation and Hyperparamater Tuning](#model-validation-and-hyperparameter-tuning)
-* [Model Evaluation](#model-evaluation)
 * [Predictions](#predictions)
 * [Discussion](#discussion)
 * [Credits and Acknowledgements](#credits-and-acknowledgements)
@@ -59,7 +58,7 @@ pip install -r requirements.txt
 
 **STEP 3: Data Preparation:** We prepared the data by using scaling methods.
 
-**STEP 4: EDA (Exploratory Data Analysis):** It is important to use descriptive and graphical statistics to look for patterns, correlations, and comparisons in the dataset. In this step, we used heatmaps and correlation matrices to analyze the data.
+**STEP 4: EDA (Exploratory Data Analysis):** It is important to use descriptive and graphical statistics to look for patterns, correlations, and comparisons in the dataset. In this step, we used Seaborn pairplots and boxplots to analyze the data.
 
 **STEP 5: Data Modelling:** In this project, we used Linear Regression and Random Forest Regressor.
 
@@ -146,6 +145,10 @@ Generate a realistic dataset of rental prices for major Canadian cities, includi
 
 # Data Preparation and Exploratory Data Analysis
 
+## Loading Data
+
+Since we used Google Colab, this is how we uploaded our data and saw a preview of the data:
+
 ```jupyter
 from google.colab import files
 uploaded = files.upload()
@@ -172,47 +175,108 @@ df_pr.tail()
 ```
 <img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/EDA2.png"/>
 
-  <ul>
-    <li>Target Variable=MonthlyRent</li>
-    <li>Feature variables categorized into three types: Categorical Variables, Discrete Variables and Continuous Variables.</li>
-    <li>Pairwise plots were produced using Seaborn to identify patterns and relationships.</li>
-  </ul>
+
+## Exploratory Data Analysis
+
+For the exploratory data analysis on high-impact columns:
+
+* Target Variable=MonthlyRent
+ 
+* Feature variables categorized into three types: Categorical Variables, Discrete Variables and Continuous Variables.
+ 
+* Pairwise plots were produced using Seaborn to identify patterns and relationships.
   
 <img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Figure1.png"/>
 
-  <ul>
-    <li>The following features had the most influence on MonthlyRent, and to be used for model building: City, RentalType, Year, Month, Bedrooms, 
-SquareFootage, and AnnualPropertyTax.</li>
-    <li>Performed Categorical Encoding and Standardized Scaling for pre-processing pipeline, where:</li>
-    <ul>
-      <li>Dependant variable=MonthlyRent</li>
-      <li>Categorical variables=City, RentalType</li>
-      <li>Discrete variables=Year, Month, Bedrooms, SquareFootage, Admissions</li>
-      <li>Continuous variables=AnnualPropertyTax</li>
-    </ul>
+## Data Preparation
+City, RentalType, Year, Month, Bedrooms, SquareFootage, and AnnualPropertyTax were the features that had the most influence on MonthlyRent, and are therefore to be used for model building.
+
+But before proceeding, we performed Categorical Encoding and Standardized Scaling for pre-processing pipeline, where:
+
+* **Dependant variable:** MonthlyRent
+
+* **Categorical variables:** City, RentalType
+
+* **Discrete variables:** Year, Month, Bedrooms, SquareFootage, Admissions
+
+* **Continuous variables:** AnnualPropertyTax
+
+Code snippet:
+
+```jupyter
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import OneHotEncoder
+
+dep_var = ['MonthlyRent']
+
+categorical_vars_comb = ['City', 'RentalType']
+
+discrete_vars_comb = ['Year', 'Month', 'Bedrooms', 'SquareFootage','Admissions']
+
+continuous_vars_comb = ['AnnualPropertyTax']
+
+# Categorical - one hot encode
+cat_ohe_step = ('ohe', OneHotEncoder(sparse_output=False, handle_unknown='ignore'))
+cat_steps = [cat_ohe_step]
+cat_pipe = Pipeline(cat_steps)
+cat_transformers = [('cat', cat_pipe, categorical_vars_comb)]
+
+# Numerical -  scale
+num_scl_step = ('scl', StandardScaler())
+num_steps = [num_scl_step]
+num_pipe = Pipeline(num_steps)
+num_transformers = [('num', num_pipe, discrete_vars_comb + continuous_vars_comb)]
+
+ct = ColumnTransformer(transformers=cat_transformers + num_transformers)
+
+ct.fit(df_combine[categorical_vars_comb + discrete_vars_comb + continuous_vars_comb])
+X=ct.transform(df_combine[categorical_vars_comb + discrete_vars_comb + continuous_vars_comb])
+y=df_combine[['MonthlyRent']].values
+
+```
+
+The we executed a train-test split. We split the data into test and train sets. The train set will be used to train the model, while the test set will be used to test the model's performance.
+
+```jupyter
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+
+print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+```
+
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
 ---
 
 # Model Building
+To make our model selection varied, we opted to go for one model that worked best for determining linear relationships, and for the other model that worked best for handling non-linear relationships. We used the following two supervised learning regression models: Linear Regression and Random Forest Regressor. 
+
+**Linear Regression:** Following feature engineering, we split our data into training and testing sets (test size=20%).  Then, we trained the linear regression model, then made predictions on the training set.
+**Random Forest Regressor:** The algorithm is virtually the same as for the linear regression model, this time setting model=RandomForestRegressor() with n_estimators=100 and random_state=0.
 
 ## Model Building Steps
 
-<ul>
-    <li>Steps for model selection (both linear regression and random forest regressor):</li>
-    <ul>
-      <li>(1) Define target (y) and features (X) </li>
-      <li>(2) Encode categorical features</li>
-      <li>(3) Split data into training and testing sets, size=0.2</li>
-      <li>(4) Initialize, then train model</li>
-      <li>(5) Get model coefficients and intercept</li>
-      <li>(6) Make predictions on test set</li>
-      <li>(7) Evaluate model</li>
-      <li>(8) Perform k-fold cross-validation (k=5)</li>
-      </ul>
-    <li>Performed hyperparameter tuning on random forest regressor using GridSearchCV.</li>
-  </ul>
+Steps for model selection (both linear regression and random forest regressor):
+
+* (1) Define target (y) and features (X)
+
+* (2) Encode categorical features</li>
+
+* (3) Split data into training and testing sets, size=0.2
+
+* (4) Initialize, then train model
+
+* (5) Get model coefficients and intercept
+ 
+* (6) Make predictions on test set
+
+* (7) Evaluate model
+
+* (8) Perform k-fold cross-validation (k=5)
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
@@ -226,12 +290,22 @@ SquareFootage, and AnnualPropertyTax.</li>
     <li><b>R^2 Score:</b> 0.935382</li>
    <li><b>Average MSE from Cross-Validation:</b> 626996.754116</li>
     </ul>
+
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Eval1.1.png"/>
+
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Eval1.2.png"/>
+
+ 
 <b>Random Forest Regressor:</b>
   <ul>
     <li><b>RMSE:</b> 34611.563041</li>
     <li><b>R^2 Score:</b> 0.980581</li>
    <li><b>Average MSE from Cross-Validation:</b> 716345.255222</li>
     </ul>
+
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Eval2.1.png"/>
+
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Eval2.2.png"/>
 
 Random Forest Regressor performed better. As it is more suited for non-linear data, suggesting data's non-linearity.
 
@@ -241,27 +315,203 @@ Random Forest Regressor performed better. As it is more suited for non-linear da
 
 # Model Validation and Hyperparameter Tuning
 
-1) We ensured that our categorical columns were consistent (i.e., datatype set as string) 
-2) Set target variable name (i.e., target_variable=’MonthlyRent’) 
-3) Identify and set categorical and numerical columns 
-4) Exclude target variable from features 
-5) Separate target and features 
-6) Define preprocessing for categorical data 
-7) Define the Random Forest Model 
-8) Create a Pipeline, then define the parameter grid for tuning:
- 9) Split the dataset into training and test sets 
-10) Perform grid search with Cross-Validation 
-11) Print the best parameters and score, then train the model with said parameters 
+Performed hyperparameter tuning on random forest regressor using GridSearchCV.
+
+* (1) We ensured that our categorical columns were consistent (i.e., datatype set as string) 
+
+* (2) Set target variable name (i.e., target_variable=’MonthlyRent’) 
+
+* (3) Identify and set categorical and numerical columns 
+
+* (4) Exclude target variable from features 
+
+* (5) Separate target and features 
+
+* (6) Define preprocessing for categorical data 
+
+* (7) Define the Random Forest Model 
+
+* (8) Create a Pipeline, then define the parameter grid for tuning:
+
+* (9) Split the dataset into training and test sets 
+
+* (10) Perform grid search with Cross-Validation 
+
+* (11) Print the best parameters and score, then train the model with said parameters
+
+Code snippet:
+
+```jupyter
+# Hyperparameter Tuning for Random Forest Regressor 
+import pandas as pd
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+
+
+df_combine = pd.merge(df_rent_clean, df_pr_agg, on=['City', 'Year', 'Month'], how='left')
+df_combine.drop(['Date', 'Province'], inplace=True, axis=1)  # Drop non-important columns
+
+# Ensure categorical columns are consistent
+for col in df_combine.select_dtypes(include=['object', 'category']).columns:
+    df_combine[col] = df_combine[col].astype(str)
+
+# Set the actual target variable name
+target_variable = 'MonthlyRent'  # Replace with the correct target column name
+
+# Identify categorical and numerical columns
+categorical_columns = df_combine.select_dtypes(include=['object']).columns.tolist()
+numerical_columns = df_combine.select_dtypes(include=['int64', 'float64']).columns.tolist()
+
+# Exclude the target variable from the features
+numerical_columns = [col for col in numerical_columns if col != target_variable]
+
+# Separate features and target
+X = df_combine.drop(columns=[target_variable])
+y = df_combine[target_variable]
+
+# Define preprocessing for categorical data
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_columns)
+    ],
+    remainder='passthrough'  # Keep numerical columns untouched
+)
+
+# Define the Random Forest model
+model = RandomForestRegressor(random_state=42)
+
+# Create a pipeline
+pipeline = Pipeline(steps=[('preprocessor', preprocessor), ('model', model)])
+
+# Define the parameter grid for tuning
+param_grid = {
+    'model__n_estimators': [50, 100, 200],
+    'model__max_depth': [10, 20, None],
+    'model__min_samples_split': [2, 5, 10],
+    'model__min_samples_leaf': [1, 2, 4]
+}
+
+# Split the dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Perform Grid Search with Cross-Validation
+grid_search = GridSearchCV(estimator=pipeline, param_grid=param_grid, cv=3, scoring='neg_mean_squared_error', verbose=2, n_jobs=-1)
+grid_search.fit(X_train, y_train)
+
+# Display the best parameters and score
+print("Best Parameters:", grid_search.best_params_)
+print("Best Negative Mean Squared Error:", grid_search.best_score_)
+
+# Train the model with the best parameters
+best_model = grid_search.best_estimator_
+test_score = best_model.score(X_test, y_test)
+print("Test Set Score (R^2):", test_score)
+```
+
+Results:
+
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Tuning.png"/>
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
 
 ---
 
-# Model Evaluation
-
----
-
 # Predictions
+
+## Testing Best Model
+
+```jupyter
+## Testing the best model 
+
+y_pred = best_model.predict(X_test) 
+residuals = y_test - y_pred  
+
+fig = plt.figure(figsize=(10, 6))  
+fig.subplots_adjust(hspace=.5)
+ax1 = fig.add_subplot(211) 
+ax2 = fig.add_subplot(212)
+ax1.scatter(y_pred, residuals, alpha=0.6)
+ax1.axhline(y=0, color='r', linestyle='--')
+ax1.set_xlabel('Predicted Values')
+ax1.set_ylabel('Residuals')
+ax1.set_title('Residual Plot')
+
+ax2.hist(residuals, bins = 35,)
+ax2.set_xlabel('Predicted Values')
+ax2.set_title('Residuals Histogram')
+
+fig.show()
+```
+
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/PredictTest1.png"/>
+
+Residuals are well distributed along the predicted value.
+
+
+```jupyter
+## Checking for overfittng  
+
+# Evaluate R^2 on the training set
+train_score = best_model.score(X_train, y_train)
+
+# Print train and test scores
+print("Training Set Score (R^2):", train_score)
+print("Test Set Score (R^2):", test_score)
+```
+
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/PredictTest2.png"/>
+
+Training score is slightly better, but it is not enough to indicate overfitting. Overall the model is generalizing well and R2 score is exceptional.
+
+```jupyter
+## Checking for feature importances 
+import numpy as np 
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+
+# Get the feature names after preprocessing
+preprocessor = best_model.named_steps['preprocessor']
+ohe = preprocessor.named_transformers_['cat']
+
+# Extracting names for one-hot encoded features
+ohe_feature_names = ohe.get_feature_names_out(categorical_columns)
+
+# Combine numerical and one-hot encoded feature names
+all_feature_names = list(ohe_feature_names) + numerical_columns
+
+# Extract feature importance from the Random Forest model
+importances = best_model.named_steps['model'].feature_importances_
+
+# Sort and plot feature importance
+import numpy as np
+import matplotlib.pyplot as plt
+
+sorted_indices = np.argsort(importances)[::-1]
+plt.figure(figsize=(10, 6))
+
+plt.bar(range(len(importances)), importances[sorted_indices], align='center')
+plt.xlim((0,10))
+plt.xticks(range(len(importances)), np.array(all_feature_names)[sorted_indices], rotation=90)
+plt.title('Feature Importance')
+plt.show()
+```
+
+<img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/PredictTest3.png"/>
+
+## Prediction Results
+
+Steps:
+
+* (1) Use the best_model.predict() function on the combined dataset (with ‘MonthlyRent’ column dropped)
+
+* (2) Then the prediction dataset was combined with the historic rent dataset via concatenation.
+
+* (3) Admissions data was prepared for plotting (for the purposes of this project, we assumed that admissions levels will remain the same for 2024 and 2025).
+
+* (4) Admissions data and combined rent data for Canada’s largest cities (i.e., Toronto, Montreal, Vancouver, Calgary, Edmonton, Ottawa) were plotted side-by-side
 
 <img src="https://github.com/Francis-Calingo/Canadian-Rental-Prices-and-Immigration-ML-Predictive-Model/blob/main/Figures/Toronto%20Prediction.png"/>
 
