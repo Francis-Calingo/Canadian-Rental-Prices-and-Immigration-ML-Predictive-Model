@@ -66,7 +66,7 @@ pip install -r requirements.txt
 
 **STEP 7: Optimize Model with Hyperparameter Tuning:** We performed Hyperparameter Tuning on Linear Regression and Random Forest Regressor models using GridSearchCV to reach the best models.
 
-**STEP 98: Make Predictions:** Tested the best model, then used it to predict rental prices in 6 Canadian cities.
+**STEP 9: Make Predictions:** Tested the best model, then used it to predict rental prices in 6 Canadian cities.
 
 
 [<b>Back to Table of Contents</b>](#table-of-contents)
