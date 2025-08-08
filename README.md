@@ -54,7 +54,7 @@ pip install -r requirements.txt
 
 **STEP 1: Problem Definition:** Will new permanent resident targets set out by the federal government decrease rental prices across Canada? Since rental prices are a continuous variable, this is a regression problem.
 
-**STEP 2: Data Gathering:** We scraped Permanent Resident Admissions data (since 2015) from Immigration, Refugees and Citizenship Canada, and enerated synthetic rental price data using a comprehensive ChatGPT prompt to compensate for lack of proprietary data.
+**STEP 2: Data Gathering:** We scraped Permanent Resident Admissions data (since 2015) from Immigration, Refugees and Citizenship Canada, and generated synthetic rental price data using a comprehensive ChatGPT prompt to compensate for lack of proprietary data.
 
 **STEP 3: Data Preparation:** We prepared the data by using scaling methods.
 
